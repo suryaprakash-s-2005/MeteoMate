@@ -121,11 +121,11 @@ header {
   font-size: 16px;
   background: transparent;
   color: #555;
-  text-align: center;
+  text-align: left;
 }
 
 .search-bar input::placeholder {
-  text-align: center;
+  text-align: left;
 }
 
 .search-bar button {
@@ -257,7 +257,7 @@ hr {
   .search-bar input {
     width: calc(100% - 60px);
     font-size: 14px;
-    text-align: center;
+    text-align: left;
   }
 
   .search-bar button {
