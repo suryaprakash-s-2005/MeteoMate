@@ -18,12 +18,10 @@ async function checkData(city) {
         errorContainer.style.display = "none";
         weatherContainer.style.display = "block";
 
-        // Reset and re-trigger animation
         weatherContainer.classList.remove("fade-in");
-        void weatherContainer.offsetWidth; // force reflow
+        void weatherContainer.offsetWidth; 
         weatherContainer.classList.add("fade-in");
 
-        // Set weather icon
         const condition = data.weather[0].main;
         switch (condition) {
             case "Clouds":
@@ -68,7 +66,6 @@ async function checkData(city) {
                 weatherIcon.src = "Sources/weather.png";
         }
 
-        // Set weather info
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "&deg;" + "C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
@@ -84,4 +81,10 @@ searchBtn.addEventListener("click", () => {
     } else {
         checkData(searchBar.value.trim());
     }
+});
+
+searchBar.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
 });
