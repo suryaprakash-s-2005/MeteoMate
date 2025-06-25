@@ -108,7 +108,7 @@ header {
   border-radius: 30px;
   padding: 5px;
   margin: 20px auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .search-bar input {
@@ -121,11 +121,11 @@ header {
   font-size: 16px;
   background: transparent;
   color: #555;
-  text-align: center; 
+  text-align: center;
 }
 
 .search-bar input::placeholder {
-  text-align: center; 
+  text-align: center;
 }
 
 .search-bar button {
@@ -196,6 +196,105 @@ hr {
 /* =======================
    Responsive Design
 ======================= */
+
+/* Small Devices: Very small (≤ 350px) */
+@media (max-width: 350px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .search-bar button {
+    width: 90%;
+    height: 45px;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .material-icons {
+    font-size: 20px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cols {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .details p {
+    font-size: 0.85rem;
+  }
+
+  .weatherReport-container h1 {
+    font-size: 2rem;
+  }
+
+  .weatherReport-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium Small Devices: (351px–500px) */
+@media (max-width: 500px) and (min-width: 351px) {
+  .search-bar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .search-bar input {
+    width: calc(100% - 60px);
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .search-bar button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+  .material-icons {
+    font-size: 20px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cols {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .details p {
+    font-size: 0.85rem;
+  }
+
+  .weatherReport-container h1 {
+    font-size: 2rem;
+  }
+
+  .weatherReport-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets and small laptops (≥600px) */
 @media (min-width: 600px) {
   body {
     font-size: 17px;
@@ -226,6 +325,7 @@ hr {
   }
 }
 
+/* Large screens (≥900px) */
 @media (min-width: 900px) {
   body {
     font-size: 18px;
@@ -249,59 +349,6 @@ hr {
 
   .details p {
     font-size: 1.1rem;
-  }
-}
-
-/* Small Devices (≤ 500px) */
-@media (max-width: 500px) {
-  .search-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .search-bar input {
-    width: 90%;
-    font-size: 14px;
-    padding: 10px 15px;
-    text-align: center;
-  }
-
-  .search-bar input::placeholder {
-    text-align: center;
-  }
-
-  .search-bar button {
-    width: 90%;
-    height: 45px;
-    border-radius: 12px;
-    margin: 0 auto;
-  }
-
-  .material-icons {
-    font-size: 20px;
-  }
-
-  .weatherReport-container h1 {
-    font-size: 2rem;
-  }
-
-  .weatherReport-container h2 {
-    font-size: 1.5rem;
-  }
-
-  .details {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cols {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .details p {
-    font-size: 0.85rem;
   }
 }
 
